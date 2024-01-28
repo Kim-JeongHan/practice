@@ -17,4 +17,23 @@ endif()
 
 add_executable(BOJ1406
               code/BOJ1406.cpp)
+ 
+add_executable(BOJ1148
+              code/BOJ1148.cpp)
 
+add_executable(BOJ10828
+              code/BOJ10828.cpp)
+
+add_executable(BOJ10845
+              code/BOJ10845.cpp)
+
+add_executable(BOJ10866
+              code/BOJ10866.cpp)
+
+add_executable(BOJ4949
+              code/BOJ4949.cpp)
+
+add_executable(BOJ10799
+              code/BOJ10799.cpp)
+add_executable(BOJ2504
+              code/BOJ2504.cpp)
