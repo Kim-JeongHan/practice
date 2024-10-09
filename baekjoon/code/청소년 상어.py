@@ -1,20 +1,18 @@
 
 A = [list(map(int, input().split())) for _ in range(4)]
-print(A)
-f_map=[]
-d_map =[]
+maps = []
 for line in A:
-    f =[]
-    d = []
+    fishes=[]
+    fish = tuple()
     for i, value in enumerate(line):
-        if i%2==0:
-            f.append(value)
-        else:
-            d.append(value)
-    f_map.append(f)
-    d_map.append(d)
+        fish += (value,)
+        if i%2==1:
+            fishes.append(fish)
+            fish = tuple()
+    maps.append(fishes)
 
-dire = [0,1,2,3,4,5,6,7] #up, counter-clock
+
+# dire = [0,1,2,3,4,5,6,7] #up, counter-clock
 
 dx = [-1,-1, 0, 1, 1, 1, 0, -1]
 dy = [0, -1,-1, -1, 0, 1, 1, 1]
@@ -23,9 +21,11 @@ def map_print():
     string = ""
     for x in range(4):
         for y in range(4):
-            string += f"{f_map[x][y]} "
+            string += f"{maps[x][y][0]} "
         string += "\n"
     print(string)
+
+map_print()
 
 def fish_move(s_x=0, s_y=0):
     fish_number = 1
@@ -48,12 +48,12 @@ def fish_move(s_x=0, s_y=0):
         fish_number +=1
         if fish_number > 16:
             break
-
-
-# map_print()
-f_map[0][0] = 0
-d_map[0][0] = 0
-fish_move()
+#
+#
+# # map_print()
+# f_map[0][0] = 0
+# d_map[0][0] = 0
+# fish_move()
 # map_print()
 
 
